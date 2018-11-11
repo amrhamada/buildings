@@ -663,8 +663,6 @@ function filterBy(stage) {
 
 function animateLine() {
 
-    // console.log('moveend');
-
     document.getElementById('mapNav').style.pointerEvents = "auto";
     document.getElementById('mapNav').style.opacity = 1;
 
@@ -673,13 +671,25 @@ function animateLine() {
         document.getElementById('mapNav').style.pointerEvents = "none";
         document.getElementById('mapNav').style.opacity = 0.3;
 
-        if (animated == false) {
+        if (animated == false && stage == 2) {
+
+            setTimeout(function(){
+                for (let i = 0; i < rectCollection.features.length; i++) {
+                    (function(index) {
+                        animateTimeout = setTimeout(function() {
+                        changeCenter(index);
+                        }, i * 15);
+                    })(i);
+                }
+             }, 1500);
+
+        } else {
 
             for (let i = 0; i < rectCollection.features.length; i++) {
                 (function(index) {
-                    setTimeout(function() {
+                    animateTimeout = setTimeout(function() {
                     changeCenter(index);
-                    }, i * 10);
+                    }, i * 15);
                 })(i);
             }
         }
