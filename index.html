@@ -674,6 +674,7 @@ function animateLine() {
 
         document.getElementById('mapNav').style.pointerEvents = "none";
         document.getElementById('mapNav').style.opacity = 0.3;
+        map.setLayoutProperty('point', 'visibility', 'visible');
 
         if (animated == false && stage == 2) {
 
@@ -685,7 +686,7 @@ function animateLine() {
                         }, i * 15);
                     })(i);
                 }
-             }, 1500);
+             }, 1000);
 
         } else {
 
@@ -697,8 +698,9 @@ function animateLine() {
                 })(i);
             }
         }
+    } else {
+        map.setLayoutProperty('point', 'visibility', 'none');
     }
-
 }
 
 function changeCenter(index) {
