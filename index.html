@@ -753,15 +753,6 @@ map.on('load', function () {
 
 });
 
-
-map.on('movestart', function() {
-
-    // console.log('movestart');
-    if (explore == false) {
-        document.getElementById('mapNav').style.pointerEvents = "none";
-        document.getElementById('mapNav').style.opacity = 0.3;
-    }
-})
 map.on('moveend', animateLine);
 
 
@@ -780,6 +771,9 @@ function displayDate() {
 
   if (explore == true) {
     exploreMode();
+  } else {
+    document.getElementById('mapNav').style.pointerEvents = "none";
+    document.getElementById('mapNav').style.opacity = 0.3;
   }
 
 }
