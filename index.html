@@ -778,13 +778,15 @@ function displayDate() {
 
   if (stage == 0) {
     document.getElementById('initNote').style.opacity = 0;
-  }
-
-  if (stage <= 8) {
+  } else if (stage <= 8 && explore == false) {  
     stage++;
     getStage();
+    document.getElementById('forwardBtn').style.pointerEvents = "auto";
+    document.getElementById('forwardBtn').style.opacity = 1;
+  } else if (stage == 9) {
+    document.getElementById('forwardBtn').style.pointerEvents = "none";
+    document.getElementById('forwardBtn').style.opacity = 0.3;
   }
-
   if (explore == true) {
     exploreMode();
   } else {
