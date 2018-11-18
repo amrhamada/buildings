@@ -599,6 +599,7 @@ function changeCenter(index) {
         document.getElementById('forwardBtn').style.pointerEvents = "auto";
         document.getElementById('backBtn').style.opacity = 1;
         document.getElementById('forwardBtn').style.opacity = 1;
+        map.off('moveend', animateLine);
       } else if (index == rectCollection.features.length - 1 && stage == 9) {
         document.getElementById('backBtn').style.pointerEvents = "auto";
         document.getElementById('forwardBtn').style.pointerEvents = "none";
@@ -646,8 +647,9 @@ map.on('load', function () {
     document.getElementById('mapHold').style.pointerEvents = "inherit";
     map.setLayoutProperty('mapbox-satellite', 'visibility', 'none');
 });
-map.on('moveend', animateLine);
+
 function displayDate() {
+  map.on('moveend', animateLine);
   document.getElementById('infoHold').style.display = "block";
 
   // console.log('stage', stage);
