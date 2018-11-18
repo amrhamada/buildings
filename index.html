@@ -185,6 +185,14 @@
 #infoHoldContent iframe {
     pointer-events: none;
 }
+#mobileInfoNote {
+    display: none;
+    text-align: right;
+    margin: 0 15px 10px;
+    font-size: 10px;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
 #displayDate {
     position: absolute;
     top:10px;
@@ -268,6 +276,7 @@
     }
     #infoHoldContent {
         padding: 15px;
+        font-size: 12px;
     }
     #infoHoldContent h2 {
         margin: 0 0 10px 0;
@@ -277,6 +286,9 @@
     }
     #infoHoldContent ul {
         padding:0;
+    }
+    #mobileInfoNote {
+        display: block;
     }
     .mapboxgl-ctrl-top-right .mapboxgl-ctrl {
         display: none;
@@ -321,6 +333,7 @@
         </div>
         <div id="infoHold">
             <div id="infoHoldContent"></div>
+            <div id="mobileInfoNote">Click to close</div>
         </div>
         <div id='map'></div>
     </div>
