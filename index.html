@@ -447,6 +447,7 @@ function exploreMode() {
         document.getElementById('infoHold').style.display = "none";
         explore = true;
         document.getElementById('map').style.pointerEvents = "auto";
+        map.off('moveend', animateLine);
     } else {
         map.doubleClickZoom.disable();
         map.dragPan.disable();
