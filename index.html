@@ -8,14 +8,12 @@
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
 <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
 <style>
-
 #insetWrap {
     height:650px;
     display: block;
     width:100%;
     position: relative;
 }
-
 #mapHold {
     display: block;
     max-width:1400px;
@@ -24,7 +22,6 @@
     position: relative;
     pointer-events:none;
 }
-
 #mapLoad {
     top:0;
     left:0;
@@ -40,7 +37,6 @@
     -ms-transition: opacity 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out;
 }
-
 #mapLoader {
       position: absolute;
       left: 48%;
@@ -55,17 +51,14 @@
       -webkit-animation: mapLoadSpin 1s linear infinite;
       animation: mapLoadSpin 1s linear infinite;
     }
-
     @-webkit-keyframes mapLoadSpin {
       0% { -webkit-transform: rotate(0deg); }
       100% { -webkit-transform: rotate(360deg); }
     }
-
     @keyframes mapLoadSpin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-
 #topRail {
     position: absolute;
     top:0;
@@ -78,31 +71,26 @@
     background-color:#FFF;
     box-shadow: 0 4px 2px -2px #d3d3d3;
 }
-
 #mapLogo {
     width:85px;
     margin: 8px 10px 0px;
     display: inline-block;
 }
-
 #mapLogo img {
     width:100%;
     display: block;
 }
-
 #mapNav {
     display: inline-block;
     position: absolute;
     top:7px;
 }
-
 #stageCount {
     display: inline-block;
     z-index:100;
     font-size:14px;
     margin-left: 4px;
 }
-
 #infoBtnHold {
     position: absolute;
     top: 7px;
@@ -111,7 +99,6 @@
     font-family: sans-serif;
     font-size:14px;
 }
-
 #infoBtnHold div {
     display: inline-block;
     position: relative;
@@ -121,7 +108,6 @@
     font-size: 13px;
     text-align: center;
 }
-
 #backBtn, #forwardBtn {
     display: inline-block;
     height: 15px;
@@ -136,49 +122,41 @@
     font-size: 14px;
     z-index:100;
 }
-
 #backBtn span{
     margin-left: -2px;
 }
-
 #forwardBtn span {
     margin-right: -2px;
 }
-
 #infoBtnHold #exploreBtn {
     background-color: #ccedec;
 }
-
 #infoBtnHold #infoBtn {
     background-color: #e0e0e0;
 }
-
 #backBtn:hover, #forwardBtn:hover {
     /*background-color:#efefef;*/
     box-shadow: 0 2px 5px #d3d3d3;
     cursor: pointer;
 }
-
 #infoBtnHold #exploreBtn:hover {
     background-color: #b2e4e3;
     cursor: pointer;
     color:#000;
 }
-
 #infoBtnHold #infoBtn:hover {
     background-color: #d3d3d3;
     cursor: pointer;
     color:#000;
 }
-
 #infoHold {
     font-family:sans-serif;
     font-size:14px;
     position: absolute;
     z-index: 100;
     left:30px;
-    top:225px;
-    width:250px;
+    top:200px;
+    width:280px;
     max-width:850px;
     background-color: #fbdccc;
     border: 1px solid #fff;
@@ -190,20 +168,16 @@
     -ms-transition: opacity 0.2s ease-in-out;
     -o-transition: opacity 0.2s ease-in-out;
 }
-
 #infoHold:hover {
     opacity:0;
 }
-
-#infoHold h1 {
+#infoHold h1, #infoHold h2 {
     margin-top: 0;
     margin-bottom: 0;
 }
-
 #infoHoldContent {
     padding: 25px;
 }
-
 #infoHoldContent ul {
     margin:0;
 }
@@ -211,7 +185,6 @@
 #infoHoldContent iframe {
     pointer-events: none;
 }
-
 #displayDate {
     position: absolute;
     top:10px;
@@ -221,7 +194,6 @@
     width:50%;
     color:#eb5200;
 }
-
 #initNote {
     display: inline-block;
     margin-left: 16px;
@@ -235,41 +207,30 @@
     -ms-transition: opacity 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out;
 }
-
 #dateYear {
     font-size:30px;
     font-weight: bold;
 }
-
-
 #dateDesc {
     font-size:16px;
     line-height:20px;
 }
-
 #map {
     height:650px;
     width:100%;
     position: absolute;
     top:0;
 }
-
-
 .mapboxgl-ctrl-top-right .mapboxgl-ctrl {
     margin: 60px 10px 0 0;
 }
-
-
 @media (max-width:680px) {
-
     #mapHold, #map {
         height:450px;
     }
-
     #insetWrap {
         height: 550px;
     }
-
     #topRail {
         top:auto;
         bottom:0;
@@ -277,7 +238,6 @@
         box-shadow: none;
         border-top: 1px solid;
     }
-
     #infoBtnHold {
         top: auto;
         left: 0;
@@ -285,24 +245,19 @@
         width: 100%;
         text-align: center;
     }
-
     #infoBtnHold div {
         width: 40%;
         padding: 10px 4%;
         font-size:12px;
     }
-
     #initNote {
         display: none;
     }
-
     #mapNav {
         bottom:55px;
         right:10px;
         top:auto;
     }
-
-
     #infoHold {
         top: 0;
         left: 0;
@@ -311,28 +266,22 @@
         border-radius:0;
         border-bottom:1px solid;
     }
-
     #infoHoldContent {
         padding: 15px;
     }
-
     #infoHoldContent h2 {
         margin: 0 0 10px 0;
     }
-
     #infoHoldContent p {
         margin:0;
     }
-
     #infoHoldContent ul {
         padding:0;
     }
-
     .mapboxgl-ctrl-top-right .mapboxgl-ctrl {
         display: none;
     }
 }
-
 </style>
 </head>
 
@@ -378,7 +327,6 @@
 </div>
 
 <script>
-
 var initialLabel = false;
 var infoOpen = false;
 var initZoom = true;
@@ -390,11 +338,9 @@ var centroids;
 var centroidProperties;
 var centroidCoordinates;
 var centroidFeatures;
-
 var centroidCoords = [];
 var centroidProp = [];
 var centroidFeat = [];
-
 var munBounds = {
     "type":"FeatureCollection", "features": [
     {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-79.2200306,43.9709114],[-79.2201469,43.9708846],[-79.2174362,43.9625689],[-79.2235416,43.9609427],[-79.2286228,43.9598319],[-79.2287027,43.9601825],[-79.2370891,43.9582637],[-79.2534723,43.954592],[-79.2536551,43.9553855],[-79.2778025,43.9497153],[-79.2777691,43.9495773],[-79.3028776,43.9438066],[-79.3027561,43.9433047],[-79.3098068,43.9417371],[-79.3289381,43.9374196],[-79.3289778,43.9375791000001],[-79.35319899999999,43.9319513],[-79.3530358,43.9312954],[-79.377135,43.9257371],[-79.3771665,43.92586250000009],[-79.3903177,43.9228778],[-79.3912067,43.9269955],[-79.3911835,43.929331999999995],[-79.3906383,43.931822],[-79.3900296,43.9372256],[-79.3904493,43.9407202],[-79.3923493,43.9480038],[-79.39305120000002,43.9516691],[-79.3933869,43.9546451000001],[-79.39350879999989,43.9598101],[-79.39311239999991,43.9741021],[-79.3934718,43.9775391],[-79.3950576,43.9841863],[-79.39567570000001,43.9878008],[-79.3964542,43.9936503],[-79.3967898,43.9951992],[-79.3977661,43.9974097],[-79.3993381,43.999426],[-79.4027859,44.0026795],[-79.4042743,44.0044198000001],[-79.405197,44.0059139],[-79.406166,44.0085879],[-79.40785699999999,44.0163687],[-79.40795040000002,44.0173256],[-79.410343,44.0281811],[-79.4109668,44.0314712],[-79.4122335,44.0353949],[-79.4145237,44.0421129],[-79.4160677,44.04608150000001],[-79.4169084,44.0488696],[-79.418106,44.0534413],[-79.4185556,44.0564113],[-79.4198387,44.0626152],[-79.4211233,44.0681646],[-79.4094456,44.0707347],[-79.4006397,44.0727596],[-79.3829879,44.076871],[-79.3396684,44.0867137],[-79.3104378,44.0933426],[-79.2852101,44.0992123],[-79.2761166,44.1012788],[-79.2714836,44.0908751],[-79.2636126,44.0725983],[-79.2622597,44.0696081],[-79.2592725,44.0625508],[-79.2545828,44.0519143],[-79.2425073,44.0238232],[-79.2346419,44.006015999999995],[-79.221978,43.97697850000001],[-79.2200306,43.9709114]]]},"properties":{"OGF_ID":67916311,"NAME_SHORT":"WHITCHURCH-STOUFFVILLE"}},
@@ -422,37 +368,31 @@ var munBounds = {
     {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-79.3903177,43.9228778],[-79.3866474,43.908341],[-79.38317080000002,43.8939362],[-79.379288,43.8786051],[-79.3784559,43.8751222],[-79.3727876,43.8520691],[-79.3714924,43.846951999999995],[-79.3823074,43.8444995],[-79.3822722,43.8443648000001],[-79.4062774,43.8390125],[-79.4064183,43.8395603],[-79.4287892,43.834634],[-79.4544895,43.8292619],[-79.4585755,43.8475407],[-79.4618835,43.8619947],[-79.4672761,43.8840794],[-79.4709017,43.8986847],[-79.47190080000001,43.9024196],[-79.4754498,43.9170514],[-79.4764021,43.9207104],[-79.4769657,43.920593],[-79.4778202,43.9242119],[-79.47957,43.9316369],[-79.48135549999989,43.9388899],[-79.4855948,43.9571189],[-79.4591754,43.9630261],[-79.43545329999989,43.9682469],[-79.4353855,43.9679434],[-79.41047160000001,43.973148200000004],[-79.410592,43.9736644],[-79.3934718,43.9775391],[-79.39311239999991,43.9741021],[-79.39350879999989,43.9598101],[-79.3933869,43.9546451000001],[-79.39305120000002,43.9516691],[-79.3923493,43.9480038],[-79.3904493,43.9407202],[-79.3900296,43.9372256],[-79.3906383,43.931822],[-79.3911835,43.929331999999995],[-79.3912067,43.9269955],[-79.3903177,43.9228778]]]},"properties":{"OGF_ID":67916310,"NAME_SHORT":"RICHMOND HILL"}},
     {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-79.5098397,44.0635364],[-79.5062193,44.0491286],[-79.5044931,44.0417416],[-79.5020416999999,44.0308707],[-79.501334,44.0235514],[-79.4993623,44.0159138],[-79.4917208,43.9828134],[-79.4882193,43.9681244],[-79.4874503,43.9644968],[-79.4855948,43.9571189],[-79.48135549999989,43.9388899],[-79.47957,43.9316369],[-79.4778202,43.9242119],[-79.5014299,43.919463],[-79.5016138,43.919212],[-79.5129831,43.9167079],[-79.5243291,43.9142475],[-79.5259267,43.9140819],[-79.5504433999999,43.9085901],[-79.5744156,43.9035328000001],[-79.5743823,43.9033953],[-79.5908528,43.8999432],[-79.5997535,43.8980434],[-79.5998015,43.8982472],[-79.6139286,43.8952318],[-79.6250782,43.892815999999996],[-79.6250355,43.8926106],[-79.6299532,43.8916762],[-79.6547606,43.88641200000001],[-79.6691725,43.883247],[-79.67297099999999,43.882304999999995],[-79.6806223,43.8806394],[-79.6974206,43.8770827],[-79.6974681,43.8772803],[-79.710746,43.87443270000001],[-79.7174862,43.886448],[-79.723243,43.8970528],[-79.7359336,43.9196666],[-79.7371113,43.9216671],[-79.7433476,43.9329646],[-79.7464864,43.9388491],[-79.74915870000001,43.9434445],[-79.751722,43.9482185],[-79.7537738,43.9518218],[-79.75437840000001,43.9526489],[-79.7580301,43.9593312],[-79.7609731,43.9641465],[-79.7657351,43.9726677],[-79.7716174,43.9828742],[-79.7754282,43.989648700000004],[-79.7521806,43.9948441],[-79.7278546,44.00011270000001],[-79.7031061,44.0055258],[-79.6784868,44.0110705],[-79.65697899999999,44.0158782],[-79.6495342,44.0174932],[-79.6494591,44.0177335],[-79.6462336,44.0185776],[-79.6465863,44.01951820000011],[-79.6476603,44.0211245],[-79.6465505,44.0221917],[-79.6441642,44.0228746],[-79.6414562,44.021249],[-79.6389101,44.0212817],[-79.6383671,44.0204738],[-79.6369046,44.0205915],[-79.6368112,44.02194990000001],[-79.6356371,44.0230884],[-79.6339220999999,44.0227888],[-79.633045,44.023489600000005],[-79.6331463,44.0245082],[-79.63246600000001,44.024797],[-79.6310406,44.0238347],[-79.6299746,44.024065],[-79.6301541,44.0254897],[-79.62964860000001,44.026303],[-79.6286597,44.0264351],[-79.6256469,44.0255976],[-79.6239374,44.0255951],[-79.6232716,44.0263253],[-79.6235872,44.0283279],[-79.6221743,44.028445999999995],[-79.62106729999999,44.0277574],[-79.6199039,44.0278784],[-79.6194932,44.0283686],[-79.6200419,44.0299958],[-79.6197651,44.0306317],[-79.6186049,44.0316892],[-79.6180325,44.0326996],[-79.6171846,44.0326622],[-79.6167406,44.0319007],[-79.6159495,44.031576],[-79.6130761,44.0327745],[-79.6122918,44.034836],[-79.6127035,44.0364434],[-79.6143627,44.0370128],[-79.6147198,44.0377554],[-79.6143681,44.0389215],[-79.6136922,44.0395435],[-79.6126394,44.0397288],[-79.6125344,44.0404841],[-79.6150771,44.0411721],[-79.6150165,44.0427018],[-79.6140593,44.0441397],[-79.6124364,44.0441471],[-79.6122622,44.0446582],[-79.6146656,44.0459749],[-79.6155962,44.0467515],[-79.61226599999999,44.0477015],[-79.6106498,44.0479609],[-79.6075131,44.0481028],[-79.6057401,44.0491886],[-79.6037453,44.0490832],[-79.60118040000002,44.0482775],[-79.5991034,44.0479459],[-79.5985345,44.0482541],[-79.597842,44.0495601],[-79.59523,44.0507434],[-79.5957329,44.0521812],[-79.5945418,44.0524006],[-79.5937281,44.0519674],[-79.5926147,44.0520617],[-79.5921993,44.0537942],[-79.5904342,44.0539977],[-79.5892374,44.054451],[-79.5885786,44.0553882],[-79.5877203,44.0557825],[-79.5859908,44.0555361],[-79.5854034,44.0560872],[-79.5852641,44.0577507],[-79.5847338,44.0585187],[-79.5836293,44.0592885],[-79.5816735,44.0601554],[-79.5784871,44.0607821],[-79.5778718,44.0614497],[-79.5760714,44.0625976],[-79.57529,44.0634162],[-79.5722395,44.065143],[-79.5718457,44.067117800000005],[-79.5712358,44.0674614],[-79.569115,44.0676464],[-79.5683593,44.0684562],[-79.5682068,44.0701198],[-79.5677564,44.0716987],[-79.5648268,44.0724093],[-79.5640945,44.0729583],[-79.5626129,44.0732855],[-79.5605928,44.0731664],[-79.5602341,44.0738056],[-79.5602573,44.0750618],[-79.5588228,44.075539],[-79.5575257,44.0754415],[-79.5568621,44.0757617],[-79.5566327,44.077402],[-79.5569162,44.0793592],[-79.5560457,44.0803206000001],[-79.5567934,44.0811582],[-79.5567317,44.0820219],[-79.5548634,44.0840602],[-79.5532529,44.0865561],[-79.5536043,44.0870961],[-79.557251,44.0874124],[-79.5576321,44.0878584],[-79.5573882,44.0901511],[-79.5563583,44.0922359],[-79.5563199,44.0934732],[-79.5558549,44.0938996],[-79.5528108,44.0940277],[-79.5504228,44.0953209],[-79.5500798,44.0962889],[-79.5506672,44.0980385],[-79.54878210000001,44.099194],[-79.5482099,44.1007172],[-79.5468525,44.1052241],[-79.546303,44.1099573],[-79.5459896,44.1111687],[-79.54576109999999,44.1137723000001],[-79.5456926,44.1172692],[-79.5451965,44.1181271],[-79.5438917,44.1191955],[-79.5432591,44.1201822],[-79.5429916,44.122164],[-79.5430906,44.1232502],[-79.5437701,44.1242356],[-79.5460513,44.1257007],[-79.5463567,44.1269786],[-79.5446927,44.1272905],[-79.54384610000001,44.1278155],[-79.5439222,44.1285997],[-79.544693,44.1297664],[-79.5461354,44.1324946],[-79.5462266,44.1331396],[-79.5457004,44.1363064],[-79.545227,44.137606000000005],[-79.5438846,44.1395831],[-79.5426636,44.1418499],[-79.5414354,44.1457505],[-79.5404739,44.1470301],[-79.538521,44.1481308],[-79.5352554,44.1489487],[-79.5317261,44.1506541],[-79.5216895,44.1106263],[-79.5163463,44.0893192],[-79.5098397,44.0635364]]]},"properties":{"OGF_ID":67916314,"NAME_SHORT":"KING"}}
     ]}
-
 var poi = {
     "type":"FeatureCollection", "features": [
-    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-79.6344789,43.7334127],[-79.6322075,43.734864800000004],[-79.6301698,43.735343],[-79.5888206,43.6646147],[-79.6087868,43.6464501],[-79.6077963,43.6449935],[-79.6017785,43.6441096],[-79.5969438,43.643006],[-79.5951645,43.6432813],[-79.5923927,43.6446337],[-79.588655,43.6427597],[-79.5882733,43.64158460000001],[-79.5853609,43.6373077],[-79.5860608,43.6354794],[-79.5851181,43.6318032],[-79.5860468,43.6297348],[-79.5853001,43.628797999999996],[-79.5808264,43.62769810000001],[-79.5796809,43.6268645],[-79.5743842,43.625457],[-79.5700307,43.62695240000009],[-79.5685131,43.6266543],[-79.5670894,43.6281492],[-79.5639237,43.62783030000001],[-79.5637073,43.6249462],[-79.5652519,43.6246236],[-79.5670418,43.6207653],[-79.5666536,43.6177981],[-79.5680047,43.6167435],[-79.5685193,43.614382],[-79.5641927,43.6123649],[-79.5674607,43.6104249],[-79.5672317,43.6091166],[-79.5625319,43.6066535],[-79.5565316,43.6026341],[-79.5559701,43.59969160000001],[-79.5538383,43.59869220000001],[-79.5540544999999,43.59639],[-79.5527657,43.5953653],[-79.5488225,43.5950001],[-79.5498542,43.5917628],[-79.5494788,43.5903713],[-79.5461939,43.5884028],[-79.5447772,43.5855035],[-79.5415734,43.5842131],[-79.5433768,43.5810009],[-79.54501499999999,43.5795664],[-79.5470671,43.5767088],[-79.5519012,43.5735984],[-79.5575763,43.5684795],[-79.56078230000001,43.5670782],[-79.5680214,43.56284350000001],[-79.5708853,43.5591304],[-79.5737283,43.5562825],[-79.5798327,43.5540592],[-79.5823887,43.5517141],[-79.5792619,43.5499015],[-79.5824449,43.5450788],[-79.58462880000002,43.5443225],[-79.5850442,43.5429681],[-79.5893857,43.5404556],[-79.59008880000002,43.5394918],[-79.59292950000001,43.539752],[-79.5959551,43.5384386],[-79.5979571,43.53643720000001],[-79.5992199,43.5342737],[-79.5995258,43.5322875],[-79.6013206,43.5285276],[-79.6022668,43.5234612],[-79.6022432,43.5201829],[-79.6015025,43.5109988],[-79.6011216,43.5098146],[-79.60276730000001,43.5060351],[-79.6043724,43.4997068],[-79.6064241,43.4965533],[-79.6124789,43.4941147],[-79.6142944,43.492615],[-79.6153137,43.4902593],[-79.6154421,43.4878836],[-79.6186837,43.4866985],[-79.6206717,43.4846333],[-79.6226383,43.48360350000001],[-79.6250627,43.4813413],[-79.6816718,43.5227596],[-79.6973515,43.5082437],[-79.7158974,43.5219392],[-79.7248182,43.5282469],[-79.7275444,43.5303888],[-79.73358080000001,43.532534999999996],[-79.7431734,43.5375543],[-79.7461169,43.539446999999996],[-79.7563583,43.546966000000005],[-79.762829,43.5525167],[-79.7711736,43.5577394],[-79.7837494,43.5669351],[-79.7886905,43.5709428],[-79.7957346,43.5757131],[-79.80652070000001,43.5836433],[-79.8091218,43.5860453],[-79.81009759999989,43.5884623],[-79.8028388,43.5949246],[-79.7995059,43.5971883],[-79.7938286,43.5994251],[-79.7879179,43.6003395],[-79.789928,43.6018096],[-79.778061,43.6094287],[-79.7610257,43.6145553],[-79.74151180000001,43.6323101],[-79.7330661,43.6397616],[-79.71346799999999,43.6507355],[-79.7076437,43.6536592],[-79.6906938,43.6686895],[-79.6776009,43.6940083],[-79.6770805,43.6951858],[-79.6725678,43.7009292],[-79.6731584,43.7068165],[-79.6611853,43.7176228],[-79.6560271,43.7220674],[-79.6393836,43.7370259],[-79.6344789,43.7334127]]]},"properties":{"id":1,"Name":"Mississauga","Desc":"It's interesting to look at building footprints at the municipal scale. Immediately you see variations in residential density and employment areas with large buildings."}},
-    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-79.44618680528822,43.685592804303],[-79.44157090109442,43.686546496399146],[-79.43867962044555,43.678953219912174],[-79.44309262775172,43.67799940710075],[-79.44618680528822,43.685592804303]]]},"properties":{"id":2,"Name":"Pre-war neighbourhood","Desc":"Corso Italia near Dufferin and St Clair is a good example of a neighbourhood built between the turn of the century and the pre-war period. Most of these houses were built between 1900 and 1930."}},
-    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-79.74519023049913,43.464752280567836],[-79.76361406268677,43.4783740734563],[-79.74768368147191,43.49294749914206],[-79.72925984928429,43.47922847473071],[-79.74519023049913,43.464752280567836]]]},"properties":{"id":3,"Name":"Trafalgar","Desc":"New development on the edge of the urban boundary is being built much denser then postwar suburbs. This type of development can be seen on the edge of many urban areas in Peel and York Regions."}},
-    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-79.67362405630838,43.494694926747535],[-79.67071758054786,43.4946246444312],[-79.65802596972692,43.486119880412616],[-79.65899479498043,43.4856278326263],[-79.66064179791138,43.48253486905178],[-79.66403268629865,43.479793246224915],[-79.67449599903654,43.47051298429212],[-79.67275211358024,43.47402840270234],[-79.67255834852952,43.47655937734053],[-79.67362405630838,43.494694926747535]]]},"properties":{"id":4,"Name":"Oakville Assembly Complex","Desc":"One of the largest footprints in the GTHA, is a Ford automobile factory."}},
-    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-79.35827423970585,43.743824016955415],[-79.34636551785846,43.74645275118821],[-79.34686171460211,43.750037202744686],[-79.34272674173843,43.75015668076641],[-79.34272674173843,43.748006039884174],[-79.34041115693478,43.74525788630173],[-79.3412381515075,43.74322656125804],[-79.33793017321656,43.74239011326458],[-79.33495299275472,43.73880520378066],[-79.33429139709655,43.73641514487373],[-79.33078155344212,43.730612231885445],[-79.34023669140394,43.725287301862906],[-79.34533798459776,43.721959043451086],[-79.3489572815049,43.72270579342138],[-79.34918861632146,43.725382995742535],[-79.35413926684217,43.73008102739125],[-79.35595865490218,43.73426401029017],[-79.35827423970585,43.743824016955415]]]},"properties":{"id":5,"Name":"Don Mills","Desc":"Don Mills was the first master planned suburb in Toronto. Based on the principles of walkability and mixed use at the time. The residential sections have come to be seen as typical postwar suburbs and have been replicated throughout the city and region."}},
-    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-79.38990933552466,43.677923503921704],[-79.38142349916333,43.67956678595451],[-79.3788267404954,43.678963136559915],[-79.37669368873244,43.679231425929515],[-79.373586852469,43.678158261253245],[-79.3734477403975,43.67718568918594],[-79.37001630930055,43.67752106064504],[-79.3680687402996,43.67671616599414],[-79.36700221441811,43.67544172738268],[-79.36955260239557,43.67255737163307],[-79.37451426627896,43.673060466919566],[-79.38517952509376,43.67353001871521],[-79.38666338718973,43.67406664484018],[-79.3877299130712,43.67577710858885],[-79.38893555102419,43.675642956331316],[-79.38990933552466,43.677923503921704]]]},"properties":{"id":6,"Name":"Rosedale","Desc":"Very low density and affluent residential neighbourhood in close proximity to the city centre and major transit systems."}},
-    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-79.38258276642583,43.74033658133979],[-79.37632272320845,43.741576139674805],[-79.374050559374,43.741040117598224],[-79.37344774039751,43.73986755257466],[-79.36950623170509,43.73762286404511],[-79.36440545575019,43.735579119213725],[-79.36486916265518,43.733602316048334],[-79.36102039534376,43.73075426455878],[-79.36055668843878,43.7294474661946],[-79.36783688684713,43.728107130561455],[-79.37173202484905,43.729078876885445],[-79.37706465425646,43.7333677757492],[-79.3796150422339,43.73574664190632],[-79.38179446468735,43.735679632885514],[-79.38258276642583,43.74033658133979]]]},"properties":{"id":7,"Name":"The Bridle Path","Desc":"The most affluent neighbourhood in Toronto"}},
-    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-79.37403317036505,43.73516868663619],[-79.37337818436175,43.73465354788946],[-79.37435776519854,43.73401275936151],[-79.37498376952028,43.734532091767015],[-79.37403317036505,43.73516868663619]]]},"properties":{"id":8,"Name":"Drake's Mansion","Desc":"<iframe src='https://giphy.com/embed/l2RnB2zd7hxtNimxa' width='100%' frameBorder='0' class='giphy-embed'></iframe>"}}
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-79.6344789,43.7334127],[-79.6322075,43.734864800000004],[-79.6301698,43.735343],[-79.5888206,43.6646147],[-79.6087868,43.6464501],[-79.6077963,43.6449935],[-79.6017785,43.6441096],[-79.5969438,43.643006],[-79.5951645,43.6432813],[-79.5923927,43.6446337],[-79.588655,43.6427597],[-79.5882733,43.64158460000001],[-79.5853609,43.6373077],[-79.5860608,43.6354794],[-79.5851181,43.6318032],[-79.5860468,43.6297348],[-79.5853001,43.628797999999996],[-79.5808264,43.62769810000001],[-79.5796809,43.6268645],[-79.5743842,43.625457],[-79.5700307,43.62695240000009],[-79.5685131,43.6266543],[-79.5670894,43.6281492],[-79.5639237,43.62783030000001],[-79.5637073,43.6249462],[-79.5652519,43.6246236],[-79.5670418,43.6207653],[-79.5666536,43.6177981],[-79.5680047,43.6167435],[-79.5685193,43.614382],[-79.5641927,43.6123649],[-79.5674607,43.6104249],[-79.5672317,43.6091166],[-79.5625319,43.6066535],[-79.5565316,43.6026341],[-79.5559701,43.59969160000001],[-79.5538383,43.59869220000001],[-79.5540544999999,43.59639],[-79.5527657,43.5953653],[-79.5488225,43.5950001],[-79.5498542,43.5917628],[-79.5494788,43.5903713],[-79.5461939,43.5884028],[-79.5447772,43.5855035],[-79.5415734,43.5842131],[-79.5433768,43.5810009],[-79.54501499999999,43.5795664],[-79.5470671,43.5767088],[-79.5519012,43.5735984],[-79.5575763,43.5684795],[-79.56078230000001,43.5670782],[-79.5680214,43.56284350000001],[-79.5708853,43.5591304],[-79.5737283,43.5562825],[-79.5798327,43.5540592],[-79.5823887,43.5517141],[-79.5792619,43.5499015],[-79.5824449,43.5450788],[-79.58462880000002,43.5443225],[-79.5850442,43.5429681],[-79.5893857,43.5404556],[-79.59008880000002,43.5394918],[-79.59292950000001,43.539752],[-79.5959551,43.5384386],[-79.5979571,43.53643720000001],[-79.5992199,43.5342737],[-79.5995258,43.5322875],[-79.6013206,43.5285276],[-79.6022668,43.5234612],[-79.6022432,43.5201829],[-79.6015025,43.5109988],[-79.6011216,43.5098146],[-79.60276730000001,43.5060351],[-79.6043724,43.4997068],[-79.6064241,43.4965533],[-79.6124789,43.4941147],[-79.6142944,43.492615],[-79.6153137,43.4902593],[-79.6154421,43.4878836],[-79.6186837,43.4866985],[-79.6206717,43.4846333],[-79.6226383,43.48360350000001],[-79.6250627,43.4813413],[-79.6816718,43.5227596],[-79.6973515,43.5082437],[-79.7158974,43.5219392],[-79.7248182,43.5282469],[-79.7275444,43.5303888],[-79.73358080000001,43.532534999999996],[-79.7431734,43.5375543],[-79.7461169,43.539446999999996],[-79.7563583,43.546966000000005],[-79.762829,43.5525167],[-79.7711736,43.5577394],[-79.7837494,43.5669351],[-79.7886905,43.5709428],[-79.7957346,43.5757131],[-79.80652070000001,43.5836433],[-79.8091218,43.5860453],[-79.81009759999989,43.5884623],[-79.8028388,43.5949246],[-79.7995059,43.5971883],[-79.7938286,43.5994251],[-79.7879179,43.6003395],[-79.789928,43.6018096],[-79.778061,43.6094287],[-79.7610257,43.6145553],[-79.74151180000001,43.6323101],[-79.7330661,43.6397616],[-79.71346799999999,43.6507355],[-79.7076437,43.6536592],[-79.6906938,43.6686895],[-79.6776009,43.6940083],[-79.6770805,43.6951858],[-79.6725678,43.7009292],[-79.6731584,43.7068165],[-79.6611853,43.7176228],[-79.6560271,43.7220674],[-79.6393836,43.7370259],[-79.6344789,43.7334127]]]},"properties":{"id":1,"Name":"City-scale patterns","Desc":"At the municipal scale, using Mississauga as an example, building footprints provide an interesting perspective on broad land use and built form patterns. In particular, variations in residential density,  employment areas with large buildings, major transportation corridors and natural features stand out.  <Br><br>Click the 'explore on your own' button to have a closer or click the arrow to move on."}},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-79.44618680528822,43.685592804303],[-79.44157090109442,43.686546496399146],[-79.43867962044555,43.678953219912174],[-79.44309262775172,43.67799940710075],[-79.44618680528822,43.685592804303]]]},"properties":{"id":2,"Name":"Pre-war neighbourhood","Desc":"There is an interesting variation in residential form that can be seen by looking at individual neighbourhoods across the region.  For example, Corso Italia, near Dufferin and St Clair, is a good representation of some of the housing that was built between the turn of the century and the pre-war period (most of these houses were built between 1900 and 1930).  These houses have an average floorplate area of 1450 square feet."}},
+   {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-79.35827423970585,43.743824016955415],[-79.34636551785846,43.74645275118821],[-79.34686171460211,43.750037202744686],[-79.34272674173843,43.75015668076641],[-79.34272674173843,43.748006039884174],[-79.34041115693478,43.74525788630173],[-79.3412381515075,43.74322656125804],[-79.33793017321656,43.74239011326458],[-79.33495299275472,43.73880520378066],[-79.33429139709655,43.73641514487373],[-79.33078155344212,43.730612231885445],[-79.34023669140394,43.725287301862906],[-79.34533798459776,43.721959043451086],[-79.3489572815049,43.72270579342138],[-79.34918861632146,43.725382995742535],[-79.35413926684217,43.73008102739125],[-79.35595865490218,43.73426401029017],[-79.35827423970585,43.743824016955415]]]},"properties":{"id":3,"Name":"Don Mills","Desc":"Don Mills is another interesting example.  This was the first master planned suburb in Toronto. Its design was based around the idea of encouraging walkability by mixing residential and employment uses. The residential sections have come to be seen as typical postwar suburbs and have been replicated throughout the city of Toronto and the GTHA region.  The average size of residential building floorlpates in this example is 1875 square feet."}},   
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-79.38990933552466,43.677923503921704],[-79.38142349916333,43.67956678595451],[-79.3788267404954,43.678963136559915],[-79.37669368873244,43.679231425929515],[-79.373586852469,43.678158261253245],[-79.3734477403975,43.67718568918594],[-79.37001630930055,43.67752106064504],[-79.3680687402996,43.67671616599414],[-79.36700221441811,43.67544172738268],[-79.36955260239557,43.67255737163307],[-79.37451426627896,43.673060466919566],[-79.38517952509376,43.67353001871521],[-79.38666338718973,43.67406664484018],[-79.3877299130712,43.67577710858885],[-79.38893555102419,43.675642956331316],[-79.38990933552466,43.677923503921704]]]},"properties":{"id":5,"Name":"Rosedale","Desc":"Rosedale is an example of a very low density and affluent residential neighbourhood in close proximity to the city centre and major transit systems.  As you can see, houses in this area are much larger and surrounded by considerably more land than the other areas weve looked at.  The houses in Rosedale have an average floorplate area of 2900 square feet."}},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-79.38258276642583,43.74033658133979],[-79.37632272320845,43.741576139674805],[-79.374050559374,43.741040117598224],[-79.37344774039751,43.73986755257466],[-79.36950623170509,43.73762286404511],[-79.36440545575019,43.735579119213725],[-79.36486916265518,43.733602316048334],[-79.36102039534376,43.73075426455878],[-79.36055668843878,43.7294474661946],[-79.36783688684713,43.728107130561455],[-79.37173202484905,43.729078876885445],[-79.37706465425646,43.7333677757492],[-79.3796150422339,43.73574664190632],[-79.38179446468735,43.735679632885514],[-79.38258276642583,43.74033658133979]]]},"properties":{"id":6,"Name":"The Bridle Path","Desc":"This is the most affluent neighbourhood in Toronto, with extremely large lots and an average floorplate size of 6800 square feet.  It's interesting to note the unique shape of each footprint."}},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-79.37403317036505,43.73516868663619],[-79.37337818436175,43.73465354788946],[-79.37435776519854,43.73401275936151],[-79.37498376952028,43.734532091767015],[-79.37403317036505,43.73516868663619]]]},"properties":{"id":7,"Name":"Drake's Mansion","Desc":"<iframe src='https://giphy.com/embed/l2RnB2zd7hxtNimxa' width='100%' frameBorder='0' class='giphy-embed'></iframe>"}},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-79.74519023049913,43.464752280567836],[-79.76361406268677,43.4783740734563],[-79.74768368147191,43.49294749914206],[-79.72925984928429,43.47922847473071],[-79.74519023049913,43.464752280567836]]]},"properties":{"id":4,"Name":"New Development","Desc":"Across the region there are examples of new residential developments that include homes with floor plates smaller than the more affluent areas we've looked at, but situated much closer together within a subdivision.  This example shows development in north Oakville (Trafalgar), where a large subdivision is currently under construction. The floor plates of these homes are 2100 square feet, on average.  This type of development can be seen on the edge of many urban areas in Peel, Durham and York Regions."}},
+    {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-79.67362405630838,43.494694926747535],[-79.67071758054786,43.4946246444312],[-79.65802596972692,43.486119880412616],[-79.65899479498043,43.4856278326263],[-79.66064179791138,43.48253486905178],[-79.66403268629865,43.479793246224915],[-79.67449599903654,43.47051298429212],[-79.67275211358024,43.47402840270234],[-79.67255834852952,43.47655937734053],[-79.67362405630838,43.494694926747535]]]},"properties":{"id":8,"Name":"Oakville Assembly Complex","Desc":"The Oakville Ford Plant is the largest unified building footprint in the region.  At just over 4.5 million square feet, it is rivalled only by other car manufacturing plants and major shopping malls."}}
     ]}
-
 var munExtent = [
     [-81.463623046875,41.87774145109676],
     [-77.420654296875,45.27488643704891]
 ];
-
 var maxExtent = [
     [-81.221923828125, 42.391008609205045],
     [-77.750244140625, 45.120052841530544]
 ];
-
 var explore = false;
 var initSat = false;
 var animated = false;
 var rectCollection = [];
-
 var centerX = 0;
 var centerY = 0;
-
 var geojsonPoint = {
     "type": "FeatureCollection",
     "features": [{
@@ -465,9 +405,7 @@ var geojsonPoint = {
         }
     }]
 };
-
 mapboxgl.accessToken = 'pk.eyJ1IjoidHdlYXRoZXJidXJuIiwiYSI6IllqeWNoS28ifQ.LX7mJDglVdZODqd25Z8aeg';
-
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/tweatherburn/cjnfdawxh9c032snad6aqn37g',
@@ -479,39 +417,29 @@ var map = new mapboxgl.Map({
     maxZoom: 16,
     zoom: 11
 });
-
 map.doubleClickZoom.disable();
 map.scrollZoom.disable();
 map.dragPan.disable();
-
 document.getElementById('backBtn').addEventListener("click", backStage);
 document.getElementById('forwardBtn').addEventListener("click", displayDate);
 document.getElementById('infoBtn').addEventListener("click", displayInfo);
 document.getElementById('exploreBtn').addEventListener("click", exploreMode);
-
 document.getElementById('map').style.pointerEvents = "none";
-
 var zoomControl = new mapboxgl.NavigationControl();
-
 function backStage(e){
-
     if (stage != 0) {
         stage = stage - 2;
         displayDate();
     }
-
     if (explore == true) {
         exploreMode();
     }
-
     document.getElementById('infoHold').style.display = "block";
     e.stopPropagation();
 }
-
 function exploreMode() {
     if (explore == false) {
         map.doubleClickZoom.enable();
-        map.scrollZoom.enable();
         map.dragPan.enable();
         map.addControl(zoomControl);
         this.style.opacity = 0.2;
@@ -521,7 +449,6 @@ function exploreMode() {
         document.getElementById('map').style.pointerEvents = "auto";
     } else {
         map.doubleClickZoom.disable();
-        map.scrollZoom.disable();
         map.dragPan.disable();
         map.removeControl(zoomControl);
         document.getElementById('exploreBtn').style.opacity = 1;
@@ -531,24 +458,16 @@ function exploreMode() {
         explore = false;
     }
 }
-
-
 function displayInfo(e){
-
     infoContent();
-
     if (stage == 4 && initSat == true) {
         map.off('moveend', displayInfo);
     }
-
     if (infoOpen == false) {
-
         infoOpen = true;
-
         map.setPaintProperty('gtha', 'fill-color', 'rgba(0,0,0,0.3)');
         map.setLayoutProperty('mapbox-satellite', 'visibility', 'visible');
         document.getElementById('infoBtnContent').innerHTML = "Hide satellite";
-
     } else {
         infoOpen = false;
         
@@ -557,17 +476,11 @@ function displayInfo(e){
         document.getElementById('infoBtnContent').innerHTML = "Show satellite";
     }
 }
-
 function filterBy(stage) {
-
     // console.log('stage', stage);
     // console.log('explore', explore);
-
     infoContent();
-
     centroidFeat = [];
-
-
     if (stage == 0) {
         map.flyTo({
             center: [-79.37,43.71],
@@ -577,15 +490,11 @@ function filterBy(stage) {
             pitch:55
         });
         map.setPaintProperty('gtha', 'fill-color', 'rgba(0,0,0,1)');
-
     } else if (stage == 1) {
-
         initSat = false;
-
         for (let i = 0; i < munBounds.features.length; i++) {
             // console.log('extentData', munBounds.features[i]);
             let centroid = turf.centroid(munBounds.features[i].geometry);
-
             // console.log('centroid', centroid);
             centroidFeat.push({
                 type: "Feature",
@@ -598,86 +507,64 @@ function filterBy(stage) {
                 }
             });
         }
-
         centroids = {
               "type": "FeatureCollection",
               "features": centroidFeat
             };
-
         updateLabels(centroids);
-
         map.setLayoutProperty('munBoundsLayer', 'visibility', 'visible');
         map.fitBounds(maxExtent, {padding: 40, speed: 0.5, pitch: 50, bearing: 0});
-
     } else if (stage >= 2) {
-
         animated = false;
         geojsonPoint.features[0].geometry.coordinates = [];
-
         let extentArray = poi.features[stage - 2].geometry.coordinates[0];
         let extentCoords = turf.polygon([extentArray], { name: stage });
         extent = turf.bbox(extentCoords, 100);
-
-
         const line = turf.lineString(extentArray)
         const lineCollection = turf.featureCollection([line]);
         const lineDistance = turf.lineDistance(line);
         rectCollection = turf.featureCollection([]);;
-
         if (stage == 2) {
             RECT_COUNT = 300;
         } else {
             RECT_COUNT = 100;
         }
-
         const SEGMENTS = lineDistance / RECT_COUNT;
         const UNITS = 'kilometers';
-
         for(let i = 0; i <= RECT_COUNT; i++) {
           const pointonline = turf.along(line, (SEGMENTS * i));
           rectCollection.features.push(pointonline);
         }
-
-            if (stage == 4) {
-
+            if (stage == 8) {
                 infoOpen = false;
                 map.fitBounds(extent, {padding: 40, speed: 0.8, pitch: 0, bearing:-50});
-
                 if (initSat == false) {
                     map.on('moveend', displayInfo);
                     initSat = true
                 }
-
             } else {
                 map.fitBounds(extent, {padding: 40, speed: 0.8, pitch: 50});
                 map.off('moveend', displayInfo);
-
                 initSat = false;
                 if (infoOpen == true) {
                     displayInfo();
                 }
             }
-
         map.setLayoutProperty('munBoundsLayer', 'visibility', 'none');
-
     }
-
 }
-
-
 function animateLine() {
-
-    document.getElementById('mapNav').style.pointerEvents = "auto";
-    document.getElementById('mapNav').style.opacity = 1;
-
+    document.getElementById('backBtn').style.pointerEvents = "auto";
+    document.getElementById('forwardBtn').style.pointerEvents = "auto";
+    document.getElementById('backBtn').style.opacity = 1;
+    document.getElementById('forwardBtn').style.opacity = 1;
     if (stage >= 2 && explore == false) {
-
-        document.getElementById('mapNav').style.pointerEvents = "none";
-        document.getElementById('mapNav').style.opacity = 0.3;
+        document.getElementById('backBtn').style.pointerEvents = "none";
+        document.getElementById('forwardBtn').style.pointerEvents = "none";
+        document.getElementById('backBtn').style.opacity = 0.3;
+        document.getElementById('forwardBtn').style.opacity = 0.3;
         map.setLayoutProperty('point', 'visibility', 'visible');
-
         if (animated == false && stage == 2) {
-
             setTimeout(function(){
                 for (let i = 0; i < rectCollection.features.length; i++) {
                     (function(index) {
@@ -687,9 +574,7 @@ function animateLine() {
                     })(i);
                 }
              }, 1000);
-
-        } else {
-
+        } else if (animated == false) {
             for (let i = 0; i < rectCollection.features.length; i++) {
                 (function(index) {
                     animateTimeout = setTimeout(function() {
@@ -702,35 +587,34 @@ function animateLine() {
         map.setLayoutProperty('point', 'visibility', 'none');
     }
 }
-
 function changeCenter(index) {
     centerX = rectCollection.features[index].geometry.coordinates[0];
     centerY = rectCollection.features[index].geometry.coordinates[1];
-
     geojsonPoint.features[0].geometry.coordinates.push([centerX, centerY]);
     map.getSource('pointSource').setData(geojsonPoint);
-
     animated = true;
-
-      if (index == rectCollection.features.length - 1) {
+      if (index == rectCollection.features.length - 1 && stage <= 8) {
         // console.log('done drawing');
-        document.getElementById('mapNav').style.pointerEvents = "auto";
-        document.getElementById('mapNav').style.opacity = 1;
+        document.getElementById('backBtn').style.pointerEvents = "auto";
+        document.getElementById('forwardBtn').style.pointerEvents = "auto";
+        document.getElementById('backBtn').style.opacity = 1;
+        document.getElementById('forwardBtn').style.opacity = 1;
+      } else if (index == rectCollection.features.length - 1 && stage == 9) {
+        document.getElementById('backBtn').style.pointerEvents = "auto";
+        document.getElementById('forwardBtn').style.pointerEvents = "none";
+        document.getElementById('backBtn').style.opacity = 1;
+        document.getElementById('forwardBtn').style.opacity = 0.3;
       }
 }
-
 map.on('load', function () {
-
     map.addSource('pointSource', {
         "type": "geojson",
         "data": geojsonPoint
     });
-
     map.addSource('munBoundsSource', {
         type: 'geojson',
         data: munBounds
     });
-
     map.addLayer({
         'id': 'munBoundsLayer',
         'type': 'fill',
@@ -744,7 +628,6 @@ map.on('load', function () {
             'fill-outline-color': 'rgba(0,0,0,0.85)'
         }
     });
-
     map.addLayer({
       "id": "point",
       "type": "line",
@@ -755,70 +638,50 @@ map.on('load', function () {
             'line-width': 3.5
         }
     });
-
     filterBy(stage);
-
     console.log('map loaded');  
-
     document.getElementById('mapLoad').style.opacity = 0;
     document.getElementById('initNote').style.opacity = 1;
     document.getElementById('mapLoader').style.display = "none";
     document.getElementById('mapHold').style.pointerEvents = "inherit";
-
     map.setLayoutProperty('mapbox-satellite', 'visibility', 'none');
-
 });
-
 map.on('moveend', animateLine);
-
-
 function displayDate() {
-
   document.getElementById('infoHold').style.display = "block";
 
+  // console.log('stage', stage);
   if (stage == 0) {
     document.getElementById('initNote').style.opacity = 0;
   }
   
-    if (stage <= 8) {  
+  if (stage <= 8) {  
     stage++;
     getStage();
     document.getElementById('forwardBtn').style.pointerEvents = "auto";
     document.getElementById('forwardBtn').style.opacity = 1;
   }
     
-  if (stage == 9) {
-    document.getElementById('forwardBtn').style.pointerEvents = "none";
-    document.getElementById('forwardBtn').style.opacity = 0.3;
-  }
-    
   if (explore == true) {
     exploreMode();
   } else {
-    document.getElementById('mapNav').style.pointerEvents = "none";
-    document.getElementById('mapNav').style.opacity = 0.3;
+    document.getElementById('backBtn').style.pointerEvents = "none";
+    document.getElementById('forwardBtn').style.pointerEvents = "none";
+    document.getElementById('backBtn').style.opacity = 0.3;
+    document.getElementById('forwardBtn').style.opacity = 0.3;
   }
-
 }
-
-
 function getStage() {
     document.getElementById("stageCount").innerHTML = stage + "/9";
-
     filterBy(stage);
 }
-
 function updateLabels(data) {
-
     if (initialLabel == false) {
-
         initialLabel = true;
-
         map.addSource('annexLabelsSource', {
             type: 'geojson',
             data: data
         });
-
         map.addLayer({
             'id': 'annexLabels',
             'type': 'symbol',
@@ -836,35 +699,27 @@ function updateLabels(data) {
                 "text-halo-width": 3
             }
         });
-
     } else {
         map.getSource('annexLabelsSource').setData(data);
         map.setPaintProperty('annexLabels', 'text-opacity', 1);
     }
-
 }
-
 function infoContent() {
-
     var infoContentChange = document.getElementById('infoHoldContent');
-
     // console.log('poly', poi.features[stage - 2]);
-
     if (stage == 0) {
         infoContentChange.innerHTML = 
         "<h1>Every Building in the Greater Toronto and Hamilton Area</h1>"
     } else if (stage == 1) {
-        infoContentChange.innerHTML = "<p>We've stitched together all of the building footprints available through open data portals across the GTHA to explore patterns across municipal lines.</p>"
+        infoContentChange.innerHTML = "<h2>Regional View</h2><p>We've stitched together all of the building footprint data available from open data portals across the GTHA to provide an interactive regional map. <BR><BR> Click through the arrows above to see a few things we found interesting, or click the button in the top right to explore the map on your own.</p>"
     } else if (stage >= 2) {
         var stageName = poi.features[stage - 2].properties.Name;
         var stageDesc = poi.features[stage - 2].properties.Desc;
-
         infoContentChange.innerHTML =
             "<h2>" + stageName + "</h2>" +
             "<p>" + stageDesc + "</p>"
     }
 }
-
 </script>
 </body>
 </html>
