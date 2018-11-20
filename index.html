@@ -569,6 +569,7 @@ function filterBy(stage) {
     }
 }
 function animateLine() {
+    document.getElementById('map').style.pointerEvents = "none";
     document.getElementById('backBtn').style.pointerEvents = "auto";
     document.getElementById('forwardBtn').style.pointerEvents = "auto";
     document.getElementById('backBtn').style.opacity = 1;
@@ -615,6 +616,7 @@ function changeCenter(index) {
         document.getElementById('backBtn').style.opacity = 1;
         document.getElementById('forwardBtn').style.opacity = 1;
         map.off('moveend', animateLine);
+        document.getElementById('map').style.pointerEvents = "auto";
       } else if (index == rectCollection.features.length - 1 && stage == 9) {
         document.getElementById('backBtn').style.pointerEvents = "auto";
         document.getElementById('forwardBtn').style.pointerEvents = "none";
