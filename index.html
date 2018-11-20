@@ -455,6 +455,7 @@ function exploreMode() {
     if (explore == false) {
         map.doubleClickZoom.enable();
         map.dragPan.enable();
+        map.scrollZoom.enable();
         map.addControl(zoomControl);
         this.style.opacity = 0.2;
         this.style.pointerEvents = "none";
@@ -465,6 +466,7 @@ function exploreMode() {
     } else {
         map.doubleClickZoom.disable();
         map.dragPan.disable();
+        map.scrollZoom.disable();
         map.removeControl(zoomControl);
         document.getElementById('exploreBtn').style.opacity = 1;
         document.getElementById('exploreBtn').style.pointerEvents = "auto";
