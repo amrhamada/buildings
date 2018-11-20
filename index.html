@@ -431,15 +431,14 @@ var map = new mapboxgl.Map({
     maxZoom: 16,
     zoom: 11
 });
-map.doubleClickZoom.disable();
 map.scrollZoom.disable();
-map.dragPan.disable();
 document.getElementById('backBtn').addEventListener("click", backStage);
 document.getElementById('forwardBtn').addEventListener("click", displayDate);
 document.getElementById('infoBtn').addEventListener("click", displayInfo);
 document.getElementById('exploreBtn').addEventListener("click", exploreMode);
 document.getElementById('map').style.pointerEvents = "none";
 var zoomControl = new mapboxgl.NavigationControl();
+map.addControl(zoomControl);
 function backStage(e){
     if (stage != 0) {
         stage = stage - 2;
