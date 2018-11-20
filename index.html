@@ -526,7 +526,6 @@ function filterBy(stage) {
               "type": "FeatureCollection",
               "features": centroidFeat
             };
-        updateLabels(centroids);
         map.setLayoutProperty('munBoundsLayer', 'visibility', 'visible');
         map.fitBounds(maxExtent, {padding: 40, speed: 0.5, pitch: 50, bearing: 0});
     } else if (stage >= 2) {
@@ -659,6 +658,7 @@ map.on('load', function () {
         }
     });
     filterBy(stage);
+    updateLabels(centroids);
     console.log('map loaded');  
     document.getElementById('mapLoad').style.opacity = 0;
     document.getElementById('initNote').style.opacity = 1;
