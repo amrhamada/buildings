@@ -598,7 +598,7 @@ function changeCenter(index) {
         document.getElementById('forwardBtn').style.opacity = 1;
         map.off('moveend', animateLine);
         map.dragPan.enable();
-        document.getElementById('map').style.pointerEvents = "none";
+        document.getElementById('map').style.pointerEvents = "auto";
       } else if (index == rectCollection.features.length - 1 && stage == 9) {
         document.getElementById('backBtn').style.pointerEvents = "auto";
         document.getElementById('forwardBtn').style.pointerEvents = "none";
